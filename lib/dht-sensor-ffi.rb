@@ -1,4 +1,5 @@
 
+require "dht-sensor-ffi/dht_sensor" # load ext
 require "dht-sensor/reading"
 
 require "ffi"
@@ -16,11 +17,16 @@ module DhtSensor
     humidity = FFI::MemoryPointer.new(:float)
 
     tries = 3
+    ret = 0
     while tries > 0 do
       tries -= 1
       ret = DhtSensor.readDHT(22, 4, temperature, humidity)
       break if ret == 0
       sleep 0.5
+    end
+
+    if ret != 0 then
+      raise "Failed to read from sensor (read call returned #{ret})"
     end
 
     return Reading.new(temperature.read_float, humidity.read_float)
