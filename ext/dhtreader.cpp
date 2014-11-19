@@ -1,6 +1,8 @@
 /**
- * Adapted from node-dht-sensor, LGPL
+ * Adapted from node-dht-sensor
  * https://github.com/momenso/node-dht-sensor
+ *
+ * The contents of this file are licensed under the LGPL
  */
 
 #include <cstdlib>
