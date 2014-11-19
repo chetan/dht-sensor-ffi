@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "dht-sensor-ffi"
   gem.homepage = "http://github.com/chetan/dht-sensor-ffi"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A library to use the DHT-XX type humidity/temperature sensors}
+  gem.description = %Q{A library to use the DHT-XX type humidity/temperature sensors}
   gem.email = "chetan@pixelcop.net"
   gem.authors = ["Chetan Sarva"]
   # dependencies defined in Gemfile
@@ -42,3 +42,9 @@ task :default => :test
 
 require 'yard'
 YARD::Rake::YardocTask.new
+
+require "rake/extensiontask"
+Rake::ExtensionTask.new 'dht_sensor' do |ext|
+  ext.ext_dir = "ext"
+  ext.lib_dir = "lib/dht-sensor-ffi"
+end
