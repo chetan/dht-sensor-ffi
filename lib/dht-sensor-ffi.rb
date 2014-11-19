@@ -3,10 +3,10 @@ require "dht-sensor/reading"
 
 require "ffi"
 
-module DHTSensor
+module DhtSensor
   extend FFI::Library
 
-  ffi_lib File.expand_path("../dht-sensor-ffi/dht_sensor.so", __FILE__) #"dht_sensor/dht_sensor.so"
+  ffi_lib File.expand_path("../dht-sensor-ffi/dht_sensor.so", __FILE__)
 
   attach_function :readDHT, [:int, :int, :pointer, :pointer], :long
 
