@@ -22,13 +22,18 @@ module DhtSensor
       tries -= 1
       ret = DhtSensor.readDHT(22, 4, temperature, humidity)
       break if ret == 0
-      sleep 0.5
+      sleep 1
     end
 
     if ret != 0 then
       raise "Failed to read from sensor (read call returned #{ret})"
     end
 
-    return Reading.new(temperature.read_float, humidity.read_float)
+    val = Reading.new(temperature.read_float, humidity.read_float)
+    if val.temperature == 0.0 && val.humidity == 0.0 then
+      raise "Failed to read from sensor (read returned 0, but got initial values)"
+    end
+
+    val
   end
 end
