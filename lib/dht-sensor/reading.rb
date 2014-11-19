@@ -14,6 +14,7 @@ module DhtSensor
       (@temperature * 9/5) + 32
     end
     alias_method :temp_f, :temperature_f
+    alias_method :temp, :temperature
 
   end
 end
