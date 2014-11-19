@@ -21,7 +21,7 @@ module DhtSensor
     while tries > 0 do
       tries -= 1
       ret = DhtSensor.readDHT(22, 4, temperature, humidity)
-      break if ret == 0 && !(temperature.read_float == 0.0 && humidity.read_float == 0)
+      break if ret == 0 && !(temperature.read_float == 0.0 && humidity.read_float == 0.0)
       sleep 1
     end
 
