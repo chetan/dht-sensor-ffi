@@ -37,4 +37,4 @@ dir_config('bcm2835', HEADER_DIRS, LIB_DIRS)
 #dir_config(extension_name)
 
 # Do the work
-create_makefile("dht-sensor-ffi/dht_sensor")
+create_makefile("dht-sensor/dht_sensor")

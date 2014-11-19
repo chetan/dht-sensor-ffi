@@ -1,5 +1,5 @@
 
-require "dht-sensor-ffi/dht_sensor" # load ext
+require "dht-sensor/dht_sensor" # load ext
 require "dht-sensor/reading"
 
 require "ffi"

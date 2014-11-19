@@ -46,5 +46,5 @@ YARD::Rake::YardocTask.new
 require "rake/extensiontask"
 Rake::ExtensionTask.new 'dht_sensor' do |ext|
   ext.ext_dir = "ext"
-  ext.lib_dir = "lib/dht-sensor-ffi"
+  ext.lib_dir = "lib/dht-sensor"
 end
