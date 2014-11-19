@@ -74,7 +74,7 @@ long readDHT(int type, int pin, float &temperature, float &humidity)
 #endif
 
     unsigned long long now = getTime();
-    if (now - last_read[pin] < 2000) {
+    if (now - last_read[pin] < 2000 && last_temperature[pin] != 0 && last_humidity[pin] != 0) {
 #ifdef VERBOSE
        printf("Too early to read again pin %d: %llu\n", pin, now - last_read[pin]);
 #endif
