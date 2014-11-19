@@ -7,7 +7,7 @@ require "ffi"
 module DhtSensor
   extend FFI::Library
 
-  ffi_lib File.expand_path("../dht-sensor-ffi/dht_sensor.so", __FILE__)
+  ffi_lib File.expand_path("../dht-sensor/dht_sensor.so", __FILE__)
 
   attach_function :readDHT, [:int, :int, :pointer, :pointer], :long
 
