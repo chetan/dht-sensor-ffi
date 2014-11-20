@@ -12,26 +12,26 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Chetan Sarva"]
-  s.date = "2014-11-19"
+  s.date = "2014-11-20"
   s.description = "A library to use the DHT-XX type humidity/temperature sensors"
   s.email = "chetan@pixelcop.net"
   s.extensions = ["ext/extconf.rb"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "dht-sensor-ffi.gemspec",
     "ext/dhtreader.cpp",
     "ext/extconf.rb",
     "lib/dht-sensor-ffi.rb",
+    "lib/dht-sensor/reading.rb",
     "test/helper.rb",
     "test/test_dht-sensor-ffi.rb"
   ]
