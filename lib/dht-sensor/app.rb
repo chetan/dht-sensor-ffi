@@ -39,9 +39,11 @@ module DhtSensor
     end
 
     def do_json
+      require "json"
       puts JSON.dump(to_hash(read()))
     end
 
+    # Convert to sensor reading to hash
     def to_hash(val)
       if @options[:humidity] then
         return {"humidity" => val.humidity}
