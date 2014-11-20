@@ -11,18 +11,18 @@ module DhtSensor
 
   attach_function :readDHT, [:int, :int, :pointer, :pointer], :long
 
-  def self.read
+  def self.read(pin, type=22)
 
     temperature = FFI::MemoryPointer.new(:float)
     humidity = FFI::MemoryPointer.new(:float)
 
-    tries = 3
+    tries = 50
     ret = 0
     while tries > 0 do
       tries -= 1
-      ret = DhtSensor.readDHT(22, 4, temperature, humidity)
+      ret = DhtSensor.readDHT(type, pin, temperature, humidity)
       break if ret == 0 && !(temperature.read_float == 0.0 && humidity.read_float == 0.0)
-      sleep 1
+      sleep 0.1
     end
 
     if ret != 0 then
