@@ -73,13 +73,13 @@ module DhtSensor
         if @options[:temperature] then
           puts sprintf("Temperature: %sC", val.temp)
         else
-          puts sprintf("Temperature: %sC  Humidity: %s%%", val.temp, val.humidity)
+          puts sprintf("Temperature: %sC Humidity: %s%%", val.temp, val.humidity)
         end
       else
         if @options[:temperature] then
           puts sprintf("Temperature: %sF", val.temp_f, val.humidity)
         else
-          puts sprintf("Temperature: %sF  Humidity: %s%%", val.temp_f, val.humidity)
+          puts sprintf("Temperature: %sF Humidity: %s%%", val.temp_f, val.humidity)
         end
       end
     end
