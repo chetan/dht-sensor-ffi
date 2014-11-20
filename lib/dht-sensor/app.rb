@@ -33,7 +33,7 @@ module DhtSensor
         begin
           print(read())
           sleep 2
-        rescue InterruptedException => ex
+        rescue Interrupt => ex
         end
       end
     end
