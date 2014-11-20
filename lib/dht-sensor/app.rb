@@ -85,7 +85,7 @@ module DhtSensor
     end
 
     def read
-      DhtSensor.read(options[:pin], options[:type])
+      DhtSensor.read(@options[:pin], @options[:type])
     end
 
     def validate_opts(opts)
