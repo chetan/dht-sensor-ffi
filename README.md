@@ -29,6 +29,13 @@ puts val.temp_f             # => 71.4199993133545 (temp in F)
 puts val.humidity           # => 22.700000762939453 (relative humidity %)
 ```
 
+There is also a simple binary for testing purposes
+
+```bash
+$ sudo dht_sensor
+Temperature: 22.40 C Humidity: 26.70%
+```
+
 ## Contributing to dht-sensor-ffi
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
