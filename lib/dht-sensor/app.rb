@@ -65,21 +65,21 @@ module DhtSensor
     # Print to stdout, taking the various output options into account
     def print(val)
       if @options[:humidity] then
-        puts sprintf("Humidity: %s%%", val.humidity)
+        puts sprintf("Humidity: %.2f%%", val.humidity)
         return
       end
 
       if @options[:unit] == :c then
         if @options[:temperature] then
-          puts sprintf("Temperature: %sC", val.temp)
+          puts sprintf("Temperature: %.2f C", val.temp)
         else
-          puts sprintf("Temperature: %sC Humidity: %s%%", val.temp, val.humidity)
+          puts sprintf("Temperature: %.2f C Humidity: %.2f%%", val.temp, val.humidity)
         end
       else
         if @options[:temperature] then
-          puts sprintf("Temperature: %sF", val.temp_f, val.humidity)
+          puts sprintf("Temperature: %.2f F", val.temp_f, val.humidity)
         else
-          puts sprintf("Temperature: %sF Humidity: %s%%", val.temp_f, val.humidity)
+          puts sprintf("Temperature: %.2f F Humidity: %.2f%%", val.temp_f, val.humidity)
         end
       end
     end
