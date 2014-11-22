@@ -2,9 +2,17 @@
 module DhtSensor
   class App
 
+    DEFAULT_OPTIONS = {
+      :command => :read,
+      :pin     => 4,
+      :type    => 22,
+      :unit    => :c
+    }
+
     def run!
 
       if ARGV.empty? then
+        @options = DEFAULT_OPTIONS.dup
         do_read()
         return
       end
@@ -108,12 +116,7 @@ module DhtSensor
     end
 
     def parse_opts
-      options = {
-        :command => :read,
-        :pin     => 4,
-        :type    => 22,
-        :unit    => :c
-      }
+      options = DEFAULT_OPTIONS.dup
 
       @opt_parser = OptionParser.new do |opts|
         opts.banner = "Usage: dht_sensor [command]"
