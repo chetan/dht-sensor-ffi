@@ -1,11 +1,17 @@
 
-require "optparse"
-require "optparse/time"
-
 module DhtSensor
   class App
 
     def run!
+
+      if ARGV.empty? then
+        do_read()
+        return
+      end
+
+      require "optparse"
+      require "optparse/time"
+
       @options = parse_opts()
       validate_opts(@options)
 
