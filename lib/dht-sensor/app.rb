@@ -44,11 +44,8 @@ module DhtSensor
 
     def do_loop
       while true do
-        begin
-          print(read())
-          sleep 2
-        rescue Interrupt => ex
-        end
+        print(read())
+        sleep 2
       end
     end
 
