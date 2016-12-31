@@ -1,10 +1,5 @@
 #!/usr/bin/env ruby
 
-if Process.uid != 0 then
-  puts "ERROR: dht_sensor must be run as root in order to access the sensor!"
-  exit 1
-end
-
 $: << File.expand_path("../../lib", __FILE__)
 require "dht-sensor-ffi"
 require "dht-sensor/app"

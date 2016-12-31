@@ -32,7 +32,7 @@ puts val.humidity           # => 22.700000762939453 (relative humidity %)
 There is also a simple binary for testing purposes
 
 ```bash
-$ sudo dht_sensor
+$ dht_sensor
 Temperature: 22.40 C Humidity: 26.70%
 ```
 
