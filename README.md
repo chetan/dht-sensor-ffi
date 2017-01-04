@@ -1,10 +1,10 @@
 # DHT Sensor FFI
 
 A Ruby library for reading from a DHT-11 or DHT-22 type sensor connected to a Raspberry Pi
- 
+
 ## Installation
 
-First install the bcm2835 lib, available at:
+First install the bcm2835 lib (v1.51+), available at:
 http://www.airspayce.com/mikem/bcm2835
 
 Then either install manually
