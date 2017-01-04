@@ -52,14 +52,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rake-compiler>, ["~> 0.9"])
       s.add_development_dependency(%q<yard>, ["~> 0.8"])
       s.add_development_dependency(%q<bundler>, ["~> 1.7"])
-      s.add_development_dependency(%q<jeweler>, ["~> 2.0.1"])
+      s.add_development_dependency(%q<jeweler>, ["~> 2.2"])
     else
       s.add_dependency(%q<ffi>, ["~> 1.9"])
       s.add_dependency(%q<rake>, ["~> 10.3"])
       s.add_dependency(%q<rake-compiler>, ["~> 0.9"])
       s.add_dependency(%q<yard>, ["~> 0.8"])
       s.add_dependency(%q<bundler>, ["~> 1.7"])
-      s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
+      s.add_dependency(%q<jeweler>, ["~> 2.2"])
     end
   else
     s.add_dependency(%q<ffi>, ["~> 1.9"])
@@ -67,7 +67,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rake-compiler>, ["~> 0.9"])
     s.add_dependency(%q<yard>, ["~> 0.8"])
     s.add_dependency(%q<bundler>, ["~> 1.7"])
-    s.add_dependency(%q<jeweler>, ["~> 2.0.1"])
+    s.add_dependency(%q<jeweler>, ["~> 2.2"])
   end
 end
 
