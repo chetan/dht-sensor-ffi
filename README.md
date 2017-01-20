@@ -36,6 +36,8 @@ $ dht_sensor
 Temperature: 22.40 C Humidity: 26.70%
 ```
 
+**Note**: Running as `root` _may_ be required, depending on your configuration. YMMV!
+
 ## Contributing to dht-sensor-ffi
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
