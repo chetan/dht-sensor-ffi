@@ -10,7 +10,6 @@ module DhtSensor
     end
 
     def temperature_f
-      return 0 if @temperature == 0
       (@temperature * 9/5) + 32
     end
     alias_method :temp_f, :temperature_f
